@@ -1,0 +1,57 @@
+{
+  "name": "hyperapp-less-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "analyze": "cross-env ANALYZE=true npm run build -- --progress",
+    "analyze:profile": "npm run build -- --profile --json > stats.json",
+    "build": "cross-env NODE_ENV=production webpack -p",
+    "start": "webpack-serve",
+    "test": "echo Not Implemented!"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elisherer/hyperapp-less-boilerplate.git"
+  },
+  "keywords": [
+    "hyperapp",
+    "less"
+  ],
+  "author": "Eli Sherer <elish@payoneer.com>",
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "2.5.7",
+    "html-material-css": "0.2.4",
+    "hyperapp": "1.2.8",
+    "hyperapp-forms": "0.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.0.0-beta.54",
+    "@babel/preset-env": "7.0.0-beta.54",
+    "@babel/preset-react": "7.0.0-beta.54",
+    "@babel/preset-stage-1": "7.0.0-beta.54",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "8.2.6",
+    "babel-loader": "8.0.0-beta.2",
+    "clean-webpack-plugin": "0.1.19",
+    "cross-env": "5.2.0",
+    "css-loader": "1.0.0",
+    "eslint": "4.19.1",
+    "eslint-friendly-formatter": "4.0.1",
+    "eslint-loader": "2.1.0",
+    "file-loader": "1.1.11",
+    "html-webpack-plugin": "3.2.0",
+    "hyperapp-redux-devtools": "1.1.6",
+    "less": "3.0.4",
+    "less-loader": "4.1.0",
+    "mini-css-extract-plugin": "0.4.1",
+    "style-loader": "0.21.0",
+    "url-loader": "1.0.1",
+    "webpack": "4.16.1",
+    "webpack-bundle-analyzer": "2.13.1",
+    "webpack-cli": "3.1.0",
+    "webpack-serve": "2.0.2",
+    "webpack-serve-waitpage": "1.0.1"
+  }
+}
