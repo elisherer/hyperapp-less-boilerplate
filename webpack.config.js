@@ -6,7 +6,8 @@ const
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
   CleanWebpackPlugin = require('clean-webpack-plugin'),
-  BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+  BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
+  webpackDevServerWaitpage = require('webpack-dev-server-waitpage');
 
 const mode = process.env.NODE_ENV || 'development';
 const node_modules = /[\\/]node_modules[\\/]/;
@@ -36,6 +37,14 @@ module.exports = {
       }
     }
   },*/
+  devServer: {
+    before: (app, server) => {
+
+      // Be sure to pass the server argument from the arguments
+      app.use(webpackDevServerWaitpage(server));
+
+    }
+  },
   resolve: {
     modules: [ path.resolve(__dirname, 'src'), 'node_modules' ]
   },
