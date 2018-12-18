@@ -1,9 +1,7 @@
 import { h } from 'hyperapp';
 import { isSubmitting, handleSubmit } from 'hyperapp-forms';
-import { isLoggedIn } from "actions/login";
 import Textbox from './Textbox';
 import Checkbox from './Checkbox';
-import Modal from './Modal';
 
 import styles from './LoginForm.less';
 
@@ -66,8 +64,6 @@ export default () => (state, actions) => {
         {submitting && <div data-loader />}
 
       </form>
-
-      {isLoggedIn(state) && <Modal onRequestClose={actions.login.logout}>You succesfully logged in!</Modal>}
     </div>
   );
 }
